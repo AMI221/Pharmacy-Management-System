@@ -1,0 +1,84 @@
+<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav side-nav">
+
+
+        <% if(user.UserType == 'Admin'){ %>
+            <!--Dashboard-->
+            <li><a style="font-size:18px;" href="/admin/"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>            
+
+            <!--Invoice-->            
+            <li><a style="font-size:18px;" ><i class="fa fa-fw fa-shopping-cart"></i> Invoice</a>
+                <ul class="nav child_menu">
+                    <li><a href="/admin/Sale">New Invoice</a></li>
+                    <li><a href="/admin/saleshistory"> Invoice History</a></li>
+                </ul>
+           </li>
+
+            <!--Customer-->            
+            <li><a style="font-size:18px;"><i class="fa fa-user" aria-hidden="true"></i> User</a>
+                <ul class="nav child_menu">
+                    <li><a href="/admin/usermanagement/create">Add User</a></li>
+                    <li><a href="/admin/usermanagement">Manage User</a></li>
+                </ul>
+           </li>
+
+            <!--Medicine-->           
+            <li><a style="font-size:18px;"><i class="fa fa-plus-square" aria-hidden="true"></i> Medicine</a>
+                <ul class="nav child_menu">
+                    <li><a href="/admin/medicine/create">Add Medicine</a></li>
+                    <li><a href="/admin/category">List of Category</a></li>
+                    <li><a href="/admin/genericname">Drug Generic Name</a></li> 
+                    <li><a href="/admin/medicine">Management Medicine</a></li>                                        
+                    <li><a href="/admin/batch">Management Medicine stock</a></li>
+                </ul>
+           </li>
+
+            <!--Supplier-->            
+            <li><a style="font-size:18px;"><i class="fa fa-fw fa-shopping-cart"></i> Supplier</a>
+                <ul class="nav child_menu">
+                    <li><a href="/admin/supplier/create">Add Supplier</a></li>
+                    <li><a href="/admin/supplier">Manage Supplier</a></li>
+                </ul>
+           </li>
+            
+           
+            <!---Manufacturer-->            
+            <li><a style="font-size:18px;"><i class="fa fa-building" aria-hidden="true"></i>Manufacturer</a>
+                <ul class="nav child_menu">
+                    <li><a href="/admin/Manufacturer/create">Add Manufacturer</a></li>
+                    <li><a href="/admin/Manufacturer">Manage Manufacturer</a></li>
+                </ul>
+           </li>
+
+            <!---Purchase-->            
+            <li><a style="font-size:18px;"><i class="fa fa-credit-card" aria-hidden="true"></i> Purchase</a>
+                <ul class="nav child_menu">
+                    <li><a href="/admin/sale">Add Purchase</a></li>
+                    <li><a href="/admin/saleshistory">Manage Purchase</a></li>
+                </ul>
+           </li>
+
+           
+
+
+          
+           
+          <% } else{ %>  
+            <li><a style="font-size:18px;"><i class="fa fa-fw fa-shopping-cart"></i> Invoice</a>
+                <ul class="nav child_menu">
+                    <li><a href="/admin/sale">New Invoice</a></li>
+                    <li><a href="/admin/saleshistory">Invoice History</a></li>
+                </ul>
+           </li>
+           
+         <% } %>
+
+
+    </ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+
+<!----generic name link admin/genericname how to set------>

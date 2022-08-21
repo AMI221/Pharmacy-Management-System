@@ -1,0 +1,112 @@
+<% include inc/view_header %>
+    <% include inc/view_topmenu %>
+        <% include inc/view_sidebar %>
+
+            <div id="page-wrapper">
+
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">
+                                Dashboard
+                            </h1>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+
+                    <section>
+                        <ul class="dashborad-list">
+                            <li><a href="/admin/Sale">
+                                <img src="/assets/images/cash.ico" alt="todaysell"></a>
+                                <h3>New Invoice</h3>
+                                <p>&#8369; 
+                                    <% todaySell.forEach(function(item){ %>
+                                        <%= item.sells_count_today %> 
+                                   <% }) %>
+                                </p>
+                            </li>
+                            <li><a href="/admin/saleshistory">
+                                <img src="/assets/images/today-sell.png" alt="totalsell"></a>
+                                <h3>Total Sell</h3>
+                                <p>&#8369;
+                                    <% totalSell.forEach(function(item){ %>
+                                         <%= item.sells_count %> 
+                                    <% }) %>
+                                </p>
+                            </li>
+                            <li><a href="/admin/usermanagement">
+                                <img src="/assets/images/user.ico" alt="user"></a>
+                                <h3>Users</h3>
+                                <p>
+                                    <% totalUser.forEach(function(item){ %>
+                                        <%= item.users_count %> 
+                                   <% }) %>
+                                </p>
+                            </li>
+                            
+                            <li><a href="/admin/batch">
+                                <img src="/assets/images/batch.png" alt="batch"></a>
+                                <h3>Medicine Stock</h3>
+                                <p>
+                                    <% totalBatch.forEach(function(item){ %>
+                                        <%= item.batch_count %> 
+                                   <% }) %>
+                                </p>
+                            </li>
+                            <li><a href="/admin/medicine">
+                                <img src="/assets/images/medicine.png" alt="medicine"></a>
+                                <h3>Total Medicines</h3>
+                                <p>
+                                    <% totalMedicine.forEach(function(item){ %>
+                                        <%= item.med_count %> 
+                                   <% }) %>
+                                </p>
+                            </li>
+                            <li><a href="/admin/supplier">
+                                <img src="/assets/images/supplier.png" alt="supplier"></a>
+                                <h3>Total Suppliers</h3>
+                                <p>
+                                    <% totalSupplier.forEach(function(item){ %>
+                                        <%= item.sup_count %> 
+                                   <% }) %>
+                                </p>
+                            </li>
+                            <li><a href="/admin/category">
+                                <img src="/assets/images/category.png" alt="category"></a>
+                                <h3>Total Categories</h3>
+                                <p>
+                                    <% totalCategory.forEach(function(item){ %>
+                                        <%= item.cat_count %> 
+                                   <% }) %>
+                                </p>
+                            </li><a href="/admin/genericname"></a>
+                            <li><a href="/admin/genericname">
+                                <img src="/assets/images/generic.png" alt="generic"></a>
+                                <h3>Generic Items</h3>
+                                <p>
+                                    <% totalGeneric.forEach(function(item){ %>
+                                        <%= item.generic_count %> 
+                                   <% }) %>
+                                </p>
+                            </li>
+                            <li><a href="/admin/Manufacturer">
+                                <img src="/assets/images/manufacture.png" alt="manfacturer"></a>
+                                <h3>Manufacturers</h3>
+                                <p>
+                                    <% totalManufac.forEach(function(item){ %>
+                                        <%= item.manufac_count %> 
+                                   <% }) %>
+                                </p>
+                            </li>
+                        </ul>
+                    </section>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- /#page-wrapper -->
+
+            <% include inc/view_footer %>
