@@ -3,10 +3,10 @@ This web application is used to store important information and makes medical st
 
 for run admin side:
 
-Username :admin
+Username :admin &
 password : admin
 
 for run staff side:
 
-Username : staff
+Username : staff &
 password : staff
